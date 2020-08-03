@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import './asset/App.css';
 
 import TopMenu from './layout/TopMenu'
@@ -7,40 +7,43 @@ import Footer from './layout/Footer'
 import Content from './component/Content'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    console.log(Content.prototype)
+    // console.log(App.prototype)
+    console.log("Render chạy.");
     return (
-      
-    <div className="App">
-      <header className="_define_later">
-        {/* <TopMenu /> */}
-        {/* <Header /> */}
-        <div className="container">
-          <div className="row pt-5">
-            <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+      <div className="App">
+        <header className="_define_later">
+          <TopMenu />
+          <Header />
+          <div className="container">
+            <div className="row pt-5">
+              <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+            </div>
+            <div className="row pt-5">
+              <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+            </div>
+            <div className="row pt-5">
+              <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+            </div>
+            <div className="row pt-5">
+              <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+              <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+            </div>
           </div>
-          <div className="row pt-5">
-            <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-          </div>
-          <div className="row pt-5">
-            <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-          </div>
-          <div className="row pt-5">
-            <Content title="About to rock..." img="01.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="We salute you!" img="02.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-            <Content title="Let there be rock!" img="03.jpg" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
-          </div>
-        </div>
-        {/* <Footer /> */}
-      </header>
-    </div>
-  );
+          <Footer />
+        </header>
+      </div>
+    );
   }
 }
 

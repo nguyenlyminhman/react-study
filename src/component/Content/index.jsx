@@ -7,9 +7,28 @@ class Content extends Component {
     this.state = {
       isDisplay: 0
     }
+    console.log("Content: Constructore chạy");
   }
 
+  componentWillMount() {
+    console.log('Content: componentWillMount chạy.');
+  }
+  componentDidMount() {
+    console.log('Content: componentDidMount chạy.');
+  }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Content: shouldComponentUpdate chạy.');
+    return true;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+     
+    console.log('Content: componentWillUpdate chạy.', nextState);
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Content: componentDidUpdate chạy.', prevState);
+  }
 
   ButtonForm() {
     return (
@@ -26,14 +45,14 @@ class Content extends Component {
         <input className="form-control form-control-sm" type="text" placeholder="Title" />
         <input className="form-control form-control-sm" type="text" placeholder="Content" />
         <button type="button" className="btn btn-primary btn-sm">Save</button>
-        <button type="button" className="btn btn-secondary btn-sm" onClick={()=> this.handleHideEditForm()}>Cancel</button>
+        <button type="button" className="btn btn-secondary btn-sm" onClick={() => this.handleHideEditForm()}>Cancel</button>
       </div>
     )
   }
 
   CheckDisplay() {
     return (
-      this.state.isDisplay === 0 ? this.ButtonForm(): this.EditForm() 
+      this.state.isDisplay === 0 ? this.ButtonForm() : this.EditForm()
     )
   }
 
@@ -55,7 +74,7 @@ class Content extends Component {
 
   render() {
     return (
-      <div className={"col-lg-4 "}>        
+      <div className={"col-lg-4 "}>
         <div className={"row "}>
           <div className={"col-lg-4 "}>
             <div className="p-1">
